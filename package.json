@@ -1,0 +1,12 @@
+{
+    "name": "tests",
+    "version": "7.8.9",
+    "scripts": {
+      "js1": "bun --watch js/task1/mergeApi.js",
+      "js2": "bun --watch js/task2/counter.js",
+      "js3": "bun --watch js/task3/chains.js",
+      "ts": "bun --watch ts/users.ts",
+      "bonus": "bun --watch bonus/regexp.js"
+    }
+  }
+  
