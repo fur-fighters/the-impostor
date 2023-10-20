@@ -2,26 +2,26 @@
  * TASK 1.
  * 
  * Based on how the variables are used below, declare their types accordingly.
- * If you see a place to use an enum (or enum-like structure), don't hesitate to use it.
+ * If you see a place to use an enum (or other enum-like structure), don't hesitate to use it.
  */
 
-let foo = 5;
-foo = 10;
-foo = null;
+let foo = 5
+foo = 10
+foo = null
 
-let bar = 'Foobar!';
-bar = 'test';
+let bar = 'Foobar!'
+bar = 'test'
 
-let num = 5;
-num = '6';
+let num = 5
+num = '6'
 num = null
 
-let userRole = 'admin';
-userRole = 'user';
-userRole = 'moderator';
+let userRole = 'admin'
+userRole = 'user'
+userRole = 'moderator'
 
-let userIsLogged = true;
-userIsLogged = false;
+let userIsLogged = true
+userIsLogged = false
 
 
 /**
@@ -36,8 +36,6 @@ userIsLogged = false;
  *    It should take advantage oth the `enum`(-like) type declared in the previous exercise.
  * 2. The `users` array should also have its type.
  * 3. `isLogged` is an optional property.
- * 4. `numbers` and `arr` are a very special case of "fixed" array;
- *     Will always contain 3 elements: two numbers and a string.
  */
 
 const userOne = {
@@ -62,41 +60,37 @@ const userThree = {
     role: 'admin'
 }
 
-const users = [];
-users.push(userOne, userTwo, userThree);
-
-const numbers = [5, 8, '8'];
-
-const arr = ['John', 'admin', 20]
+const users = []
+users.push(userOne, userTwo, userThree)
 
 
 /**
  * TASK 3.
  * 
- * Add type declarations to the below functions; to their arguments, return values, and innerts.
+ * Add type declarations to the below functions; to their arguments, return values, and the body.
  * We're referencing the values and types declared in the previous exercise.
  */
 
 const addUser = (login, email, age, role) => {
-    const user = { login, email, age, role };
-    users.push(user);
-    return user;
+    const user = { login, email, age, role }
+    users.push(user)
+    return user
 }
 
 const removeUser = (paramName, paramValue) => {
-    const index = users.findIndex(user => user[paramName] === paramValue);
-    users.splice(index, 1);
-    return true;
+    const index = users.findIndex(user => user[paramName] === paramValue)
+    users.splice(index, 1)
+    return true
 }
 
 const addUsers = (...users) => {
-    for(const user of users) {
-        addUser(user.login, user.email, user.age, user.role);
+    for (const user of users) {
+        addUser(user.login, user.email, user.age, user.role)
     }
 }
 
 const getUser = (paramName, paramValue) => {
-    return users.find(user => user[paramName] === paramValue);
+    return users.find(user => user[paramName] === paramValue)
 }
 
 /**
@@ -122,10 +116,12 @@ const parseField = (fieldValue) => {
  * - help also in making certain that the `inputElem` would definitely be found and have type of `HTMLInputElement`
  */
 
-const titleClickHandler = function() {
+function titleClickHandler() {
     this.addEventListener('click', () => {
         console.log('Someone clicked me...')
     })
-    const inputElem = document.querySelector('.input-elem');
+    
+    const inputElem = document.querySelector('.input-elem')
+    
     inputElem.value = 'Hello world!'
 }
