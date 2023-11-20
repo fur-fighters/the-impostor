@@ -2,9 +2,24 @@
     "name": "tests",
     "version": "7.8.9",
     "scripts": {
-      "js1": "bun --watch js/task1/mergeApi.js",
-      "js2": "bun --watch js/task2/counter.js",
-      "js3": "bun --watch js/task3/chains.js"
+      "js1": "bun --watch 1_js/task1/mergeApi.js",
+      "js2": "bun --watch 1_js/task2/counter.js",
+      "js3": "bun --watch 1_js/task3/chains.js",
+      "ts": "bun --watch 2_ts/users.ts",
+      "start:react": "parcel 3_review/react/index.html",
+      "start:vue": "parcel 3_review/vue/index.html",
+      "build:react": "parcel build 3_review/react/index.html --dist-dir 3_review/build/react",
+      "build:vue": "parcel build 3_review/vue/index.html --dist-dir 3_review/build/vue"
+    },
+    "dependencies": {
+      "react": "18.2.0",
+      "react-dom": "18.2.0",
+      "vue": "3.3.8"
+    },
+    "devDependencies": {
+      "@parcel/transformer-vue": "2.10.3",
+      "parcel": "2.10.3",
+      "process": "0.11.10"
     }
   }
   
